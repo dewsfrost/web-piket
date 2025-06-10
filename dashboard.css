@@ -1,0 +1,197 @@
+/* dashboard.css */
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background: linear-gradient(to bottom, #e0f0ff, #000000);
+  height: 100vh;
+  color: #000;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+}
+
+.sidebar {
+  background-color: #dcd6f7;
+  width: 200px;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.sidebar h2 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 25px;
+  margin-bottom: 10px;
+  color: #000000;
+}
+
+.sidebar nav a {
+  display: block;
+  color: #000;
+  text-decoration: none;
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.sidebar nav a:hover {
+  text-decoration: underline;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom, #83c5f7, #000000);
+  color: #fff;
+  position: relative; 
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: #000;
+}
+
+.topbar .logo {
+  width: 50px;
+  height: 50px;
+}
+
+.topbar .top-links a {
+  margin-left: 20px;
+  color: #6f6f6f;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.topbar .top-links a:hover {
+  text-decoration: underline;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  padding: 60px 80px 40px 80px;
+  position: relative;
+}
+
+.welcome {
+  max-width: 70%;
+  margin-top: 0;
+}
+
+.welcome h1 {
+  font-size: 70px;
+  line-height: 1.4;
+  margin-bottom: 15px;
+  font-family: 'Rubik', sans-serif;
+  color: white;
+}
+
+.welcome p {
+  font-size: 16px;
+  color: #000000;
+}
+
+.welcome a {
+  color: #0066ff;
+  text-decoration: underline;
+}
+
+
+.images-container { 
+  position: absolute; 
+  right: 180px; 
+  top: 50%; 
+  transform: translateY(-50%); 
+  width: 300px; /* Atur lebar agar lingkaran tidak terlalu menyebar */
+  height: 450px; /* Tinggi untuk menampung semua lingkaran dan offset-nya */
+}
+
+.img-circle {
+  width: 270px;
+  height: 270px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  position: absolute; /* Semua lingkaran diposisikan absolut */
+}
+
+.img-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.img-circle.small {
+  width: 225px;
+  height: 225px;
+}
+
+/* POSISI INDIVIDUAL UNTUK SETIAP LINGKARAN */
+.circle-1 { /* Lingkaran besar atas */
+  top: -70px;
+  right: 70px;
+  /* z-index: 2; Opsional jika ingin tumpang tindihnya jelas */
+}
+
+.circle-2 { /* Lingkaran kecil tengah */
+  top: 180px; /* Sesuaikan offset vertikal */
+  left: 200px; /* Sesuaikan offset horizontal */
+  /* z-index: 3; Opsional, pastikan di atas circle-1 dan circle-3 jika tumpang tindih*/
+}
+
+.circle-3 { /* Lingkaran besar bawah */
+  bottom: -100px;
+  right: 130px;
+  /* z-index: 1; Opsional */
+}
+
+
+.footer {
+  text-align: center;
+  font-size: 12px;
+  padding: 10px;
+  color: #ccc;
+  background-color: transparent;
+}
+/* === Responsive Navigation Buttons === */
+nav a, .sidebar a, button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+/* === Hover Effect for Interactivity === */
+nav a:hover, .sidebar a:hover, button:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: scale(1.05);
+}
+
+/* === Media Queries for Mobile === */
+@media (max-width: 768px) {
+  nav, .sidebar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav a, .sidebar a, button {
+    width: 100%;
+    font-size: 1.1rem;
+    text-align: left;
+  }
+
+  .main-content, .content, .container {
+    padding: 10px;
+    margin: 0;
+  }
+}

@@ -1,0 +1,145 @@
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background: linear-gradient(to bottom, #e0f0ff, #000000);
+  height: 100vh;
+  color: #000;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+}
+
+.sidebar {
+  background-color: #dcd6f7;
+  width: 200px;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.sidebar h2 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.sidebar nav a {
+  display: block;
+  color: #000;
+  text-decoration: none;
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.sidebar nav a:hover {
+  text-decoration: underline;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom, #83c5f7, #000000);
+  color: #fff;
+  position: relative;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: #000;
+}
+
+.topbar .logo {
+  width: 50px;
+  height: 50px;
+}
+
+.topbar .top-links a {
+  margin-left: 20px;
+  color: #6f6f6f;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.topbar .top-links a:hover {
+  text-decoration: underline;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 25px;
+  padding: 40px;
+  justify-items: center;
+  align-items: center;
+}
+
+.gallery-item {
+  background-color: #cccccc;
+  border-radius: 20px;
+  overflow: hidden;
+  width: 200px;
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255,255,255,0.4);
+}
+
+.footer {
+  text-align: center;
+  font-size: 12px;
+  padding: 10px;
+  color: #ccc;
+  background-color: transparent;
+}
+
+/* === Responsive Navigation Buttons === */
+nav a, .sidebar a, button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+/* === Hover Effect for Interactivity === */
+nav a:hover, .sidebar a:hover, button:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: scale(1.05);
+}
+
+/* === Media Queries for Mobile === */
+@media (max-width: 768px) {
+  nav, .sidebar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav a, .sidebar a, button {
+    width: 100%;
+    font-size: 1.1rem;
+    text-align: left;
+  }
+
+  .main-content, .content, .container {
+    padding: 10px;
+    margin: 0;
+  }
+}

@@ -1,0 +1,113 @@
+.profile-card form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-text {
+  padding: 10px;
+  width: 80%;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  outline: none;
+  text-align: center;
+}
+
+.input-text:focus {
+  border-color: #3498db;
+}
+
+.label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #444;
+  margin-bottom: 8px;
+}
+
+.preview {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.preview img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #ccc;
+}
+
+.file-input {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.btn-group {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+button.edit, button.logout {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+button.edit {
+  background-color: #2ecc71;
+}
+
+button.edit:hover {
+  background-color: #27ae60;
+  transform: scale(1.05);
+}
+
+button.logout {
+  background-color: #ff4b5c;
+}
+
+button.logout:hover {
+  background-color: #d93644;
+  transform: scale(1.05);
+}
+
+/* === Responsive Navigation Buttons === */
+nav a, .sidebar a, button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+/* === Hover Effect for Interactivity === */
+nav a:hover, .sidebar a:hover, button:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: scale(1.05);
+}
+
+/* === Media Queries for Mobile === */
+@media (max-width: 768px) {
+  nav, .sidebar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav a, .sidebar a, button {
+    width: 100%;
+    font-size: 1.1rem;
+    text-align: left;
+  }
+
+  .main-content, .content, .container {
+    padding: 10px;
+    margin: 0;
+  }
+}
